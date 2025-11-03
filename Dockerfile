@@ -1,14 +1,16 @@
-# Step 1: Use Node official image
-FROM node:20
-
-# Step 2: Set working directory
+#base image
+FROM node:24-alpine3.22
+# set the working directory
 WORKDIR /app
 
-# Step 3: Copy files
-COPY . .
+# copy packages 
+COPY package.json .
+COPY package-lock.json .
 
-# Step 4: Install dependencies
 RUN npm install
 
-# Step 5: Start the app
-CMD ["npm", "start"]
+# EXPOSE 8000-3001 or 8000 5000
+
+COPY . .
+
+CMD ["npm","start"]
