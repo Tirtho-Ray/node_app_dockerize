@@ -4,7 +4,7 @@ const app = express();
 
 const port = 8080;
 
-// mongoose.connect('mongodb+srv://docker_nodeApp:Qm9jOx0Jl2eYt8mK@cluster0.thodmul.mongodb.net/?appName=Cluster0')
+
 //     .then(() => console.log(' Connected to MongoDB'))
 //     .catch(err => console.log(' DB Error:', err));
 
